@@ -17,6 +17,7 @@
 .vscode
 
 vtgen
+!cmd/vtgen
 config.toml
 *.sqlite3
 results
