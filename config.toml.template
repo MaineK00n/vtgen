@@ -1,0 +1,24 @@
+[source]
+cve = "./cve.sqlite3"
+oval = "./oval.sqlite3"
+gost = "./gost.sqlite3"
+
+[generate]
+target = ["ospkg"] # choices: ospkg, library, cpeuri
+
+[ospkg]
+[ospkg.ubuntu]
+os = "ubuntu"
+release = "20.04"
+arch = ""
+mode = "specified" # choices: specified, random, max
+size = 0.01 # enable mode is "random"
+cves = ["CVE-2021-0001"] # enable mode is "specified"
+
+[library]
+
+[cpeuri]
+[cpeuri.NvdExactMatch]
+[cpeuri.NvdRoughMatch]
+[cpeuri.NvdVendorProductMatch]
+[cpeuri.JvnVendorProductMatch]
